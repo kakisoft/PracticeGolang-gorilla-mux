@@ -23,5 +23,6 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintln(w, "hello")
+    name := r.URL.Query().Get("name")
+    fmt.Fprintf(w, "hello %s", name)
 }
