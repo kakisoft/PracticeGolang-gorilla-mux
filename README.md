@@ -1,6 +1,9 @@
 # PracticeGolang-gorilla-mux
 PracticeGolang-gorilla/mux
 
+## go install
+[text](install_note.md)
+
 
 ## 実行
 ```

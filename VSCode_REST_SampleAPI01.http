@@ -1,0 +1,70 @@
+#====================================
+#              変数
+#====================================
+
+@baseurl = http://localhost:8000/
+
+#====================================
+#　        Sample Action
+#====================================
+
+### Action - index
+GET {{baseurl}}/add/
+content-type: application/json
+
+{
+    "param1": "1",
+    "param2": "1"
+}
+
+### Action - create
+GET {{baseurl}}/sample/create/
+content-type: application/json
+
+{
+    "name": "CreatedSampleName"
+}
+
+### Action - store
+POST {{baseurl}}/sample/store/
+content-type: application/json
+
+{
+    "name": "StoredSampleName"
+}
+
+### Action - show
+GET {{baseurl}}/sample/show/
+content-type: application/json
+
+{
+    "name": "SampleName01"
+}
+
+### Action - edit
+GET {{baseurl}}/sample/edit/
+
+### Action - update
+PUT {{baseurl}}/sample/update/
+content-type: application/json
+
+{
+    "id": "1",
+    "name": "UpdatedName"
+}
+
+### Action - destroy
+DELETE {{baseurl}}/sample/destroy/
+content-type: application/json
+
+{
+    "id": "2"
+}
+
+### Action - delete
+DELETE {{baseurl}}/sample/delete/
+content-type: application/json
+
+{
+    "id": "2"
+}
