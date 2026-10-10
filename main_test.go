@@ -67,4 +67,23 @@ func TestAddHandler(t *testing.T) {
 			}
 		})
 	}
+
+
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			req := httptest.NewRequest(http.MethodGet, "/add?"+tt.query, nil)
+			recorder := httptest.NewRecorder()
+
+			addHandler(recorder, req)
+
+			if recorder.Code != tt.wantStatus {
+				t.Errorf("status code = %d, want %d", recorder.Code, tt.wantStatus)
+			}
+
+			if recorder.Body.String() != tt.wantBody {
+				t.Errorf("body = %q, want %q", recorder.Body.String(), tt.wantBody)
+			}
+		})
+	}
 }

@@ -2,7 +2,7 @@
 PracticeGolang-gorilla/mux
 
 ## go install
-[text](install_note.md)
+[text](_note/install_note.md)
 
 
 ## 実行
